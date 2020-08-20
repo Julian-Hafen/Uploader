@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+.body {
+	background-color: black;
+	color: #FE2E2E;
+	text-align: center;
+
+}
+
+h1{
+	font-size: 4em;
+	font-family: fantasy;
+	background: black;
+	color: #fafafa
+
+}
+
+
+.button{
+	width:150px;
+    height: 25px;
+    font-size:18px;
+    background-color:#000;
+    color:#fff;
+    border:#fff solid 1px;
+
+}
