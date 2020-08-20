@@ -7,7 +7,7 @@
 <link href ="styles.css" rel = "stylesheet">
 <title>FileUploadHandler</title>
 </head>
-<body>
+<body class="wrapper">
 <center>
 
 <h1>Dateien Uploader</h1>
