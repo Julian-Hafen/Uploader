@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href ="styles.css" rel = "stylesheet">
 <title>FileUploadHandler</title>
 </head>
-<body class="wrapper">
+<body>
 <center>
 
 <h1>Dateien Uploader</h1>
