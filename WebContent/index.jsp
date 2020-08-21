@@ -15,6 +15,8 @@
  Gebe den Dateinamen ein <input type="text" name="file_name"><br>
  
  Select <input type="file" name="file2" /><br>
+ 
+ Wähle den Speicherort <input type="file" name="file2" /><br>
 
  
  <input type="submit" value="upload" />
