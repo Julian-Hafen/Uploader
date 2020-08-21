@@ -16,13 +16,8 @@
  
  Select <input type="file" name="file2" /><br>
  
- Wähle den Speicherort <script type="text/javascript">
-function getFilePath(){
-     $('input[type=file]').change(function () {
-         var filePath=$('#fileUpload').val(); 
-     });
-}
-</script><br>
+ Wähle den Speicherort <input type="file" name="returnVal" /><br>
+
 
  
  <input type="submit" value="upload" />
