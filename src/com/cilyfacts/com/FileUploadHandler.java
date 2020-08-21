@@ -7,6 +7,8 @@ import java.util.List;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JFileChooser;
+
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -18,6 +20,7 @@ public class FileUploadHandler extends HttpServlet {
  }
  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
  String file_name = null;
+ 
  response.setContentType("text/html");
  PrintWriter out = response.getWriter();
  boolean isMultipartContent = ServletFileUpload.isMultipartContent(request);
@@ -26,12 +29,26 @@ public class FileUploadHandler extends HttpServlet {
  }
  FileItemFactory factory = new DiskFileItemFactory();
  ServletFileUpload upload = new ServletFileUpload(factory);
+ 
+ 
+ JFileChooser fc = new JFileChooser();
+ fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+ int returnVal = fc.showOpenDialog(null);
+ File f;
+ if (returnVal == JFileChooser.APPROVE_OPTION)
+ {
+     f = fc.getSelectedFile();
+     System.out.println(f.getPath());
+ }
+ 
+ 
  try {
  List < FileItem > fields = upload.parseRequest(request);
  Iterator < FileItem > it = fields.iterator();
  if (!it.hasNext()) {
  return;
  }
+ 
  while (it.hasNext()) {
  FileItem fileItem = it.next();
  boolean isFormField = fileItem.isFormField();
